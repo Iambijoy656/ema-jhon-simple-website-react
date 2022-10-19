@@ -7,6 +7,10 @@ import Shop from './Components/Shop/Shop';
 import Oders from './Components/Oders/Oders';
 import Inventory from './Components/Inventory/Inventory';
 import { productsAndCartLoader } from './loaders/productsAndCartLoaders';
+import Login from './Components/Login/Login';
+import SignUp from './Components/SignUp/SignUp';
+import Shipping from './Components/Shipping/Shipping';
+import PrivateRoutes from './Components/routes/PrivateRoutes';
 
 
 function App() {
@@ -31,7 +35,19 @@ function App() {
         },
         {
           path: 'inventory',
-          element: <Inventory></Inventory>
+          element: <PrivateRoutes><Inventory></Inventory></PrivateRoutes>
+        },
+        {
+          path: 'shipping',
+          element: <PrivateRoutes><Shipping></Shipping></PrivateRoutes>
+        },
+        {
+          path: '/login',
+          element: <Login></Login>
+        },
+        {
+          path: '/signup',
+          element: <SignUp></SignUp>
         },
       ]
 

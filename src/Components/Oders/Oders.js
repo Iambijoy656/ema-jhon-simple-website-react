@@ -41,6 +41,10 @@ const Oders = () => {
             <div className='cart-container'>
                 <Cart cart={cart} clearCart={clearCart} >
 
+                    <Link to='/shipping'>
+                        <button> Proceed Shipping</button>
+                    </Link>
+
                 </Cart>
 
             </div>

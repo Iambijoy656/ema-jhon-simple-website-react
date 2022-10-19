@@ -19,3 +19,12 @@
 .header a:hover {
     color: orange
 }
+
+.logout {
+
+    margin-right: 10px;
+}
+
+.user-email {
+    color: aliceblue;
+}
