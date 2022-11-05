@@ -10,7 +10,7 @@ const Oders = () => {
 
     const handleRemoveItem = (id) => {
         // console.log(id)
-        const remaining = cart.filter(product => product.id !== id);
+        const remaining = cart.filter(product => product._id !== id);
         setCart(remaining)
         removeFromDb(id)
 
@@ -26,7 +26,7 @@ const Oders = () => {
             <div className='oders-container'>
                 {
                     cart.map(product => <ReviewItem
-                        key={product.id}
+                        key={product._id}
                         product={product}
                         handleRemoveItem={handleRemoveItem}
                     ></ReviewItem>)
